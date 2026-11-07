@@ -12,6 +12,9 @@
  * up/down direction to the right encoder rotation (Up/Down arrows on the base
  * layer, scrolling on layers 1 and 2 where the joystick moves the mouse).
  * The joystick's left/right direction has no equivalent on this board.
+ *
+ * One deliberate difference: the key left of A sends Escape here. The Eyelash
+ * repo has Caps Lock there, but Escape is what that key does in day-to-day use.
  */
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
@@ -68,7 +71,7 @@
             // -----------------------------------------------------------------------------------------------------------------
             // |   `   |  1   |  2   |   3   |    4    |  5   |                       |  6   |  7    |  8   |  9   |  0  |   =   |
             // |  TAB  |  Q   |  W   |   E   |    R    |  T   |                       |  Y   |  U    |  I   |  O   |  P  |   \   |
-            // | CAPS  |  A   |  S   |   D   |    F   |  G   |                       |  H   |  J    |  K   |  L   |  ;  |   '   |
+            // |  ESC  |  A   |  S   |   D   |    F   |  G   |                       |  H   |  J    |  K   |  L   |  ;  |   '   |
             // | SHIFT |  Z   |  X   |   C   |    V    |  B   |  MUTE  | |C+S+ALT|   |  N   |  M    |  ,   |  .   |  /  | SHIFT |
             //               | CTRL | GUI  | GUI/RET | MO 1 |  MO 2  | | BKSP  | SPACE | BKSP | GUI  | MO 2 |
             // Encoders: left = volume, right = Up/Down arrows
@@ -76,7 +79,7 @@
             bindings = <
 &kp GRAVE  &kp N1     &kp N2        &kp N3        &kp N4        &kp N5                                         &kp N6    &kp N7     &kp N8     &kp N9    &kp N0    &kp EQUAL
 &kp TAB    &kp Q      &kp W         &kp E         &kp R         &kp T                                          &kp Y     &kp U      &kp I      &kp O     &kp P     &kp BSLH
-&kp CAPS   &kp A      &kp S         &kp D         &kp F         &kp G                                          &kp H     &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
+&kp ESC    &kp A      &kp S         &kp D         &kp F         &kp G                                          &kp H     &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z      &kp X         &kp C         &kp V         &kp B      &kp C_MUTE  &kp LS(LC(LALT))        &kp N     &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
                       &kp LCTRL     &kp LEFT_GUI  &mt LGUI RET  &mo 1      &mo 2       &kp BKSP                &kp SPACE &kp BKSP   &kp RGUI   &mo 2
             >;
